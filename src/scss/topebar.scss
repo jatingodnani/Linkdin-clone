@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.topbar{
+    width:102%;
+    height:70px;
+ 
+    background-color:white; 
+   
+    display: flex;
+    box-shadow: 1px 2px 3px 4px rgba(2,20,20,0.4);
+    align-items: center;
+    
+  .react-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:50%;
+    margin-left: 40px;
+  
+  }
+  .icon:hover{
+    color:black;
+  }
+  .icon{
+    cursor: pointer;
+    color:#5e5e5e;
+  }
+.hlo{
+        width:65px;
+        margin-left: 20px;
+        
+    }
+    .hlo1{
+      width:50px;
+      
+      cursor: pointer;
+  position: relative;
+  margin-left: 800%;
+  margin-top: 40%;
+
+ 
+    }
+}

@@ -1,0 +1,90 @@
+.box{
+    width: 60%;
+    height:120px;
+
+    margin: auto;
+    margin-top: 30px;
+    
+    background-color: whitesmoke;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left:30px;
+  border-radius: 7px;
+    .imging{
+        width:65px;
+       
+    }
+    .posting{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+      margin-left: 100px;
+    }
+    .post{
+        width:80%;
+        height: 50px;
+        text-align: left;
+        background-color:whitesmoke;
+        color:rgba(84,84,84,0.89);
+        outline: none;
+        border: 1px solid #b7b7b5;
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 30px;
+
+    }
+    .post:hover{
+        background-color: #b7b7b5;
+    }
+} 
+.homi{
+    height:100%;
+  width:100%;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+}
+.posts{
+    width: 100%;
+}
+.posts1{
+    width: 60%;
+    height:auto;
+    background-color: whitesmoke;
+   border-radius: 5px;
+    margin:auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    .time{
+        font-size: 11px;
+        font-family: system-ui, sans-serif;
+       
+        color: rgba(0,0, 0,0.6);
+        margin-left: 10px;
+    }
+    .data{
+        font-weight: 400;
+        font-family: system-ui, sans-serif;
+      
+        color: rgba(0,0, 0,0.9);
+        font-size: 14px;
+        margin: 8px 6px 6px  10px;
+    }
+
+    
+}
+.name{
+    font-weight: 500;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-transform: capitalize;
+    color: rgba(15,79,157,0.6);
+    font-size: 14px;
+   margin-left: 10px;
+   margin-top: 5px;
+text-decoration: underline;
+
+}
