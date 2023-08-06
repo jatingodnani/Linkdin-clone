@@ -1,0 +1,41 @@
+.meny{
+    display: flex;
+    flex-direction:column;
+   
+    height: auto;
+    
+    .name2{
+    font-size: 20px;
+  font-weight: 600;    
+  color: rgba(0,0,0,0.9);
+  text-transform: capitalize;
+  
+  
+  text-align: center;
+  
+}
+.profile{
+height: 20px;
+width: 20px;
+}
+    .headline{
+   font-size: 14px;
+   font-weight: 400px;
+   color: rgba(0,0,0,0.6);
+   width: 300px;
+   height: auto;
+    }
+}
+
+.classi{
+  width:40px;
+ 
+ 
+  cursor:pointer;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.men{
+ margin-left: 27%;
+margin-top: 10px;
+}

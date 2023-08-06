@@ -5,11 +5,11 @@
 }
 
 .topbar{
-    width:102%;
+
     height:70px;
- 
+   width:100%;
     background-color:white; 
-   
+
     display: flex;
     box-shadow: 1px 2px 3px 4px rgba(2,20,20,0.4);
     align-items: center;
@@ -20,7 +20,8 @@
     align-items: center;
     justify-content: space-between;
     width:50%;
-    margin-left: 40px;
+    margin-left: 20px;
+        
   
   }
   .icon:hover{
@@ -35,14 +36,63 @@
         margin-left: 20px;
         
     }
-    .hlo1{
-      width:50px;
-      
-      cursor: pointer;
-  position: relative;
-  margin-left: 800%;
-  margin-top: 40%;
-
- 
+    
     }
+    .searchbar{
+      width: 400px;
+      height: auto;
+      border: 2px #b7b7b7  solid;
+      border-radius: 10px;
+      background-color: whitesmoke;
+      z-index: 2;
+      position: absolute;
+      border-radius: 15px;
+      top:65px;
+      left:28%;
+
+    }
+
+
+.searchbar{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  .userimage{
+    width: 40px;
+    height:40px;
+   object-fit: cover;
+    border-radius: 10px;
+  }
+  .ser{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 2px;
+   display: flex;
+   justify-content: center;
+  }
+  .eachuse{
+    display: flex;
+    width: 100%;
+    justify-content:center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+   cursor: pointer;
+  }
+  .eachuse:hover{
+    background-color: lightgray;
+  }
+  .username{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: system-ui;
+  }
+  .userhead{
+    font-size: 12px;
+  }
+  .both{
+    margin-left: 10px;
+  }
 }

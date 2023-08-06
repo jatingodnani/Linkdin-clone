@@ -1,53 +1,68 @@
 
-import * as React from 'react';
-import Button from '@mui/material/Button';
+import  React,{useState,useEffect} from 'react';
+import "./menu.scss";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { LogoutOutlined } from '@ant-design/icons';
+import { LogoutOutlined,  SmileOutlined, } from '@ant-design/icons';
+import { useNavigate } from 'react-router';
 
-import user from "../images1/user.png"
 import { Signout } from '../api/Authapi';
+import { getDataFromFirestore } from '../api/firestore';
 
-export default function MenuProvider({classi}) {
+export default function MenuProvider(){
+  const navigate=useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const [detail,setdetail]=useState([]);
+
+React.useEffect(()=>{
+  getDataFromFirestore(setdetail)
+});
+if(detail.length==0){
+  return <div>loading...</div>
+}
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+ 
   };
   const handleClose = () => {
     setAnchorEl(null);
+   
   };
+const profileopen=() => {
+  navigate("/profile",{state:null});
+}
 
   return (
-    <div>
+    <div className="men">
      
-       <img src={user} className={classi} id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+       <img src={detail[0]?.url}
         onClick={handleClick}
-        
+        className='classi'
        
         />
      
       <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
+       
         open={open}
         onClose={handleClose}
-        // anchorOrigin={{
-        //   vertical: 'top',
-        //   horizontal: 'left',
-        // }}
-        // transformOrigin={{
-        //   vertical: 'top',
-        //   horizontal: 'left',
-        // }}
+        anchorEl={anchorEl}
+       
       >
-        <MenuItem onClick={handleClose} style={{width:"150px"}} centered>Profile</MenuItem>
+        <MenuItem className='meny'>
+        <p className='name2'>{detail[0].name}</p>
+        <p className='headline' >{detail[0].headline}</p>
+        </MenuItem>
+        <MenuItem onClick={profileopen} className="pro" >
+        <SmileOutlined 
+        style={{paddingRight:"20px",color:"#318CE7"}}/>
+        Profile</MenuItem>
       
-        <MenuItem onClick={()=>Signout()} style={{width:"150px"}}><LogoutOutlined style={{paddingRight:"20px",color:"blue"}}/>Logout</MenuItem>
+        <MenuItem onClick={()=>Signout()}
+         ><LogoutOutlined
+         
+         style={{paddingRight:"20px",color:"#318CE7"}}/>Logout</MenuItem>
       </Menu>
     </div>
   );

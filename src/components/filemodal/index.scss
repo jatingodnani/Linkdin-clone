@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    label{
+  border: 1px  solid black;
+  padding: 10px;
+  font-family: system-ui;
+  cursor: pointer;
+    }
+    p{
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+    .prog{
+    padding: 20px;
+    }
+}

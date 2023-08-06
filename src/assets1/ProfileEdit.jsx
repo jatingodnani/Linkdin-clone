@@ -1,30 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import "./profileedit.scss";
-import { getupdatedata,getDataFromFirestore,getupdatepostnamedata  } from '../api/firestore';
-const ProfileEdit = ({data}) => {
-  const [dta,setdt]=useState([])
- 
-  useEffect(()=>{
-       getDataFromFirestore(setdt);
-     
-  },[])
- console.log(dta)
+import { getupdatedata,getDataFromFirestore,getupdatepostnamedata} from '../api/firestore';
+import {BiArrowBack} from 'react-icons/bi';
+const ProfileEdit = ({data,setEdit}) => {
+  
+
   const [inpu,setInpu]=useState({
     name:"",
     headline:"",
     location:"",
     company:"",
     collage:"",
+    skills:"",
+    about:"",
+    website:"",
   })
   useEffect(() => {
-    if (dta.length > 0) {
+    if (data.length > 0) {
       // Set the initial state of 'inpu' based on the data fetched from Firestore
-      setInpu(dta[0]);
+      setInpu(data[0]);
     }
-  }, [dta]);
-useEffect(()=>{
-  getupdatepostnamedata(inpu)
-},[inpu])
+  }, [data]);
+
 
     
   const changeinpu=(e)=>{
@@ -35,17 +32,21 @@ useEffect(()=>{
   }
   const handleupdatedata=()=>{
     const id = data && data[0] && data[0].id;
-
+    getupdatepostnamedata(inpu)
   getupdatedata(id, inpu);
-  if (dta.length === 0) {
+ 
+  if (data.length === 0) {
     return <div>Loading...</div>;
   }
 
   
   }
   return (
-    <div class="input">
-     
+    <div className="input">
+        <div className="edit"  onClick={() => setEdit(prev=>!prev)}>
+           <BiArrowBack/>
+         </div>
+     <label>Name</label>
       <input 
       type="text"
        name="name"
@@ -53,7 +54,7 @@ useEffect(()=>{
       value={inpu.name}
         placeholder="Enter Name" />
   
-    
+    <label>Headline</label>
       <input
        type="text"
         name="headline" 
@@ -62,7 +63,7 @@ useEffect(()=>{
        placeholder="Headline"
        />
 
-
+<label>Location</label>
       <input 
       type="text" 
       name="location"
@@ -71,7 +72,7 @@ useEffect(()=>{
       placeholder='Location'
       />
 
-
+<label>Company</label>
       <input 
       type="text" 
       name="company"  
@@ -80,7 +81,7 @@ useEffect(()=>{
       placeholder="Company"/>
 
 
-
+<label>Collage</label>
       <input 
       type="text" 
       name="collage"  
@@ -88,9 +89,32 @@ useEffect(()=>{
       value={inpu.collage}
       placeholder="Collage"
       />
-
-
-      <button
+<label>Website</label>
+<input
+type="url"
+name='website'
+placeholder='add website'
+onChange={changeinpu}
+value={inpu.website}
+  />
+  <label>About Me</label>
+  <textarea
+  row={5}   
+  name='about'
+  onChange={changeinpu}
+  placeholder='Add about me'
+  value={inpu.about}
+ /> 
+ <label>Skills</label>
+          <textarea
+           row={5}   
+           name='skills'
+           onChange={changeinpu}
+            placeholder='Skills'
+          value={inpu.skills}
+         /> 
+  
+   <button
       onClick={handleupdatedata}
       >Edit Profile
       </button>

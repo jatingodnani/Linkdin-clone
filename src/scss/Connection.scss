@@ -1,0 +1,50 @@
+.main{
+    display: grid;
+     grid-template-columns: auto auto;
+     gap: 20px;
+     justify-content: center;
+     margin-top: 20px;
+     .connecters{
+      border: 2px #b7b7b7  solid;
+        width: 200px;
+        height:auto;
+        padding:10px;
+        margin: 10px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+     }
+     .connecters p:first-child {
+      font-weight: bold;
+      font-size: 4rem;
+    }
+     p{
+        font-size: 16px;
+      
+     }
+   .image{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px #b7b7b7  solid;
+   }
+   button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      width: 95%;
+      text-align: center;
+      font-weight: 500;
+      font-size: 19px;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 40px;
+      transition: background-color 0.2s;
+    }
+    
+    button:hover {
+      background-color: #0056b3;
+    }
+} 

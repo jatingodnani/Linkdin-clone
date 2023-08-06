@@ -1,0 +1,29 @@
+.search{
+    width: 100%;
+    display: flex;
+    ;
+    align-items: center;
+    .finduser{
+        width:50%;
+        height:40px;
+       outline: none;
+       background-color: whitesmoke;
+       border: 0;
+        padding:10px ;
+        
+        border-radius: 8px;
+        border: 1px solid rgba(0,0,0,0.6);
+      margin-left:23%;
+      font-size: 16px;
+      font-family:Inter;
+      transition: border 0.2s ease;
+    }
+   .icons{
+    margin-left: -30px;
+    margin-bottom: 20px;
+    color: rgba(0,0,0,0.5);
+   }
+    .finduser:focus{
+        border: 2px solid #318CE7;
+    }
+}

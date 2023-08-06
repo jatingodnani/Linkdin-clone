@@ -11,24 +11,24 @@ import { getdetail } from '../api/firestore';
 export const Home = () => {
   const navigate=useNavigate();
   useEffect(()=>{
-    
-   return(onAuthStateChanged(auth,(user)=>{
-    
-      if(!user?.accessToken){
+    return(onAuthStateChanged(auth,(user)=>{
+    if(!user?.accessToken){
         console.log("hlo")
         navigate('/')
       }
     
      }))
     })
+    
+    
     const [detail,setdetail]=useState([]);
+
     useMemo(()=>{
       getdetail(setdetail)
     },[])
-  
-  return <div className='home' style={{minHeight:"100vh",width:"210vh"}}>
 
-  <Topbar />
+  return <div className='home' style={{display:"relative",zIndex:'1'}}>
+  <Topbar detail={detail}/>
   <Makepost detail={detail} />
   </div>
     

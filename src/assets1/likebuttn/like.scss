@@ -1,0 +1,108 @@
+.likebutton{
+ 
+      padding-left: 15px;
+    
+    padding-bottom: 5px;
+    cursor:pointer;
+   
+    .jdh{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        margin-top: 5px;
+        .jdh1{
+            display: flex;
+            gap: 5px;
+        }
+       .hi{
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+
+    .like{
+        font-size: 20px;
+     
+    }
+    .like1{
+        font-size: 18px;
+        margin-bottom: 5px;
+    
+    }
+    .likep{
+        font-family: System-ui;
+        font-weight: 400;
+        font-size: 10px;
+       color: #0a66c2;
+       margin-bottom: 4px;
+    }
+    .comment{
+        outline: none;
+        height: 35px;
+         border: 1px solid #737373;
+        width: 97%;
+        margin-bottom: 5px;
+        padding-left: 12px;
+        border-radius: 30px;
+        font-family: System-ui;
+        background-color: whitesmoke; 
+    }
+    .comment:focus {
+        outline: 1px solid #949494; /* Change the color on focus */
+        color: #4d4d4d;
+
+
+      }
+      .cmment{
+        width: 130px;
+        height:35px;
+        border-radius: 20px;
+        background-color: #0a66c2;
+        color: whitesmoke;
+        border: 0;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        cursor: pointer;
+    
+    }
+}
+.comment-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+ position:relative;
+   background-color: rgb(227,227,227);
+  margin:10px;
+  margin-right: 17px;
+  }
+
+  .comment-card .name23 {
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: capitalize;
+  }
+
+  .comment-card .name23:hover{
+    text-decoration: underline;
+  }
+  .comment-card .time {
+    color: #666;
+    font-size: 10px;
+    position:absolute;
+    right:20px;
+    bottom:50px
+
+  
+  }
+  .comment-card .head {
+
+    font-size:10px ;
+    }
+   .comment-card .three{
+    position:relative;
+    top:3px
+   }
+  .comment-card .comment23 {
+    margin-top: 5px;
+    font-size: 14px;
+  }

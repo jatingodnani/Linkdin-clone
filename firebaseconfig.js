@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"
 import {getFirestore} from "firebase/firestore"
-
+import { getStorage } from "firebase/storage";
 const firebaseConfig = {
   apiKey: "AIzaSyAxr1cLpuWll6GpFE-p5OlA8JCzb-r8L5g",
   authDomain: "linkdin-clone-ca1f5.firebaseapp.com",
@@ -25,4 +25,5 @@ const app = initializeApp(firebaseConfig);
 const app1 = initializeApp(firebaseConfig1, "secondFirebaseApp");
 const auth=getAuth();
 const db1 = getFirestore(app1);
-export { app,auth,app1,db1}
+const storage=getStorage(app1);
+export { app,auth,app1,db1,storage}
