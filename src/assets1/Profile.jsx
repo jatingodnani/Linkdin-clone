@@ -5,6 +5,7 @@ import { dataprofilepost, getDataFromFirestore,getdetail,profileinfo } from "../
 import { useLocation } from "react-router";
 import { LikeButton } from "./likebuttn/like.jsx"
 import { uploadeImg } from "../api/storage";
+import user from "../images1/user.png"
 import { Filemodal } from "../components/filemodal";
 const Profile = ({data,setdata,setEdit}) => {
     const location = useLocation();
@@ -61,7 +62,7 @@ useEffect(()=>{
    />
  
     <img
-      src={data[0]?.url}
+      src={data[0]?data[0].url:user}
       className="img" 
       alt="not found"
       onClick={()=>setModal2Open(prev=>!prev)}

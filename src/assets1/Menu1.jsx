@@ -5,7 +5,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { LogoutOutlined,  SmileOutlined, } from '@ant-design/icons';
 import { useNavigate } from 'react-router';
-
+import user from "../images1/user.png"
 import { Signout } from '../api/Authapi';
 import { getDataFromFirestore } from '../api/firestore';
 
@@ -37,7 +37,7 @@ const profileopen=() => {
   return (
     <div className="men">
      
-       <img src={detail[0]?.url}
+       <img src={detail[0]?detail[0].url:user}
         onClick={handleClick}
         className='classi'
        

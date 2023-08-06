@@ -95,8 +95,10 @@ export const LikeButton = ({item}) => {
      {
       comment.length>0 && commentshow ?comment.map((item)=>
       <div className="comment-card">
-      <div className="name23" onClick={navi}>{item.name}</div>
-      <div className="time"> {item.timestamp}{item.email===current[0]?.email?<BsThreeDotsVertical className="three" size={13}/>:<></>}</div>
+      <div className="name23" >{item.name}</div>
+      <div className="time"> 
+      {item.timestamp}{item.email===current[0]?.email?<BsThreeDotsVertical className="three" size={13}/>:<></>}
+      </div>
       <div className="head">{item.headline}</div>
       <div className="comment23">{item.comment}</div>
     </div>):<></>

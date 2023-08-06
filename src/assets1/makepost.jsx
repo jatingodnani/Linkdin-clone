@@ -41,7 +41,7 @@ const edit=(item)=>{
 
 }
 
-  
+  console.log(poststatus)
    
      return(
       <div className='homi'>
@@ -75,9 +75,10 @@ const edit=(item)=>{
      </div>
        </div>
          { 
+         poststatus.length==0?(<div className='imgname'>No post!!<hr/>Write post or connect with people!!</div>):
         poststatus.map((item)=>(
       
-       <Postcard item={item} edit={edit} alluser={alluser} data={data}/>
+         <Postcard item={item} edit={edit} alluser={alluser} data={data}/>
         
         
         ))
