@@ -3,7 +3,7 @@ import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import "../scss/Connection.scss"
 import {getconnected,connectbyuser} from '../api/firestore'
 
-const Connectioncard = ({user,currentuser}) => {
+const Connectedcard = ({user,currentuser}) => {
   const [connected,setconnected]=useState(false);
   
   const giveid =(user)=>{
@@ -25,7 +25,7 @@ const Connectioncard = ({user,currentuser}) => {
   )
 }
 
-export default Connectioncard;
+export default Connectedcard;
 
 
 

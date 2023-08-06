@@ -8,7 +8,6 @@ import { getDataFromFirestore,
    getDataalluseropersonal,deletepost,
    updatepost} from '../api/firestore'
 import { Button } from 'antd';
-import { useNavigate } from 'react-router'
 
 import { Postcard } from './Postcard';
 
@@ -30,7 +29,7 @@ const [status,setstatus]=useState("");
 
   
     const updateok=()=>{
-      updatepost(currentpost?.id,status,setModal1Open)
+      updatepost(currentpost?.id,status)
       setModal1Open(false)
     }
 const edit=(item)=>{
@@ -38,7 +37,7 @@ const edit=(item)=>{
   setisedit(true)
   setModal1Open(true); 
   setcurrentpost(item)
-  setstatus(item?.first,item?.seturl)
+  setstatus(item?.first)
 
 }
 

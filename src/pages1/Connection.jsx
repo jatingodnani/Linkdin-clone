@@ -2,7 +2,7 @@ import Topbar from "../components/Topbar";
 import "../scss/Connection.scss"
 import {connectbyuser, getDataFromFirestore, getDataalluseropersonal} from "../api/firestore"
 import { useEffect, useState } from "react";
-import Connectioncard from "../components/connectioncard";
+import Connectioncard from "../components/Connectedcard"
 
 const Connection = () => {
   const [alluser,setalluser]=useState([]);

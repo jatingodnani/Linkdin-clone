@@ -50,10 +50,10 @@ export const deletepost=async(id)=>{
     console.log(error)
    }
 }
-export  const updatepost=async(id,status,seturl)=>{
+export  const updatepost=async(id,status)=>{
   try{
     const docRef = doc(db1, "users", id);
-    await updateDoc(docRef,{first:status,seturl:seturl})
+    await updateDoc(docRef,{first:status})
    
    toast.success("successfully updated!!!")
 }
